@@ -3,10 +3,15 @@
 import React from 'react';
 import Navbar from "@/components/Navbar";
 import CarouselContainer from "@/components/CarouselContainer";
+import Image from "next/image";
+import TechStack from "@/components/TechStack";
+import About from "@/components/About";
+import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
 
 const Page = () => {
     return (
-        <div>
+        <div className='pb-[250px]'>
             <Navbar />
 
             <div className="flex flex-col items-center justify-center gap-8 mt-[80px]">
@@ -29,6 +34,15 @@ const Page = () => {
                 </div>
 
                 <CarouselContainer />
+
+                <h1 className='text-[40px] font-medium mt-[50px]'>The Stack Behind the Build</h1>
+                <TechStack />
+
+                <div className='bg-white w-screen rounded-t-[80px] mt-[100px] p-[200px] flex flex-col gap-10'>
+                    <About />
+                    <Skills />
+                    <Projects />
+                </div>
             </div>
         </div>
     );

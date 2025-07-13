@@ -103,6 +103,7 @@
    Custom Button Hover Animation
    =============================== */
 @layer components {
+
   .animated-border {
     position: relative;
     overflow: hidden;
@@ -110,12 +111,6 @@
     transition: border-color 0.3s ease, color 0.3s ease;
     color: white;
     z-index: 0;
-  }
-
-  .badge {
-    border: white 2px;
-    font-weight: 500;
-    padding: 12px 21px 12px 21px;
   }
 
   .animated-border::before {
