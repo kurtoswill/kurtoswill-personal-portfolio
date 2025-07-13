@@ -1,0 +1,34 @@
+{
+  "images": [
+    {
+      "id": "5",
+      "name": "Bluehacks 2025",
+      "img": "/image/hero/bluehacks.png",
+      "location": "Ateneo de Manila University"
+    },
+    {
+      "id": "4",
+      "name": "Cryptobilis Bitcoin Pizza Day",
+      "img": "/image/hero/cryptobilis.png",
+      "location": "Metro Tent"
+    },
+    {
+      "id": "3",
+      "name": "Sparkfest 2025",
+      "img": "/image/hero/gdg.png",
+      "location": "The Globe Towers"
+    },
+    {
+      "id": "2",
+      "name": "Philippine Blockchain Week 2025",
+      "img": "/image/hero/pbw.png",
+      "location": "SMX Convention Center"
+    },
+    {
+      "id": "1",
+      "name": "Sonic Codecamp",
+      "img": "/image/hero/sonic.png",
+      "location": "Mega Towwer"
+    }
+  ]
+}

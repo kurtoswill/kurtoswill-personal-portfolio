@@ -112,6 +112,12 @@
     z-index: 0;
   }
 
+  .badge {
+    border: white 2px;
+    font-weight: 500;
+    padding: 12px 21px 12px 21px;
+  }
+
   .animated-border::before {
     content: "";
     position: absolute;
@@ -131,6 +137,34 @@
 
   .animated-border:hover::before {
     width: 100%;
+  }
+
+  .slider {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .sliderTrack {
+    display: flex;
+    width: fit-content;
+    animation: scroll 40s linear infinite;
+  }
+
+  .slide {
+    flex-shrink: 0;
+    width: 500px;
+    height: 500px;
+    margin-right: 20px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 }
 

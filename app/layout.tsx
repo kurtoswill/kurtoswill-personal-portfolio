@@ -26,7 +26,7 @@ export default function RootLayout({
         <body className="antialiased">
         <div className="relative min-h-screen">
             <Background />
-            <main className="relative z-10">
+            <main className="relative z-10 mx-[200px]">
                 {children}
             </main>
         </div>
