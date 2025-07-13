@@ -8,6 +8,7 @@ import TechStack from "@/components/TechStack";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Competitions from "@/components/Competitions";
 
 const Page = () => {
     return (
@@ -42,6 +43,7 @@ const Page = () => {
                     <About />
                     <Skills />
                     <Projects />
+                    <Competitions />
                 </div>
             </div>
         </div>
