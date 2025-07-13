@@ -1,5 +1,14 @@
+'use client';
+
 import React from 'react';
 import Navbar from "@/components/Navbar";
+import Autoplay from "embla-carousel-autoplay"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+} from "@/components/ui/carousel"
+import CarouselContainer from "@/components/CarouselContainer";
 
 const Page = () => {
     return (
@@ -12,7 +21,7 @@ const Page = () => {
                </h1>
                <p className='font-medium text-[21px]'>Building fast, responsive websites and growing through tech events.</p>
 
-               <div className='flex gap-4'>
+               <div className='flex gap-4 mb-[80px]'>
                    <button className="animated-border font-medium text-lg py-3 px-6 rounded-full bg-white/10 shadow">
                        Competitions
                    </button>
@@ -20,8 +29,21 @@ const Page = () => {
                    <button className="animated-border font-medium text-lg py-3 px-6 rounded-full bg-white/10 shadow">
                        Tech Events
                    </button>
-
                </div>
+
+               <Carousel
+                   plugins={[
+                       Autoplay({
+                           delay: 2000,
+                       }),
+                   ]}
+               >
+                   <CarouselContent>
+                       <CarouselItem>
+                           <CarouselContainer />
+                       </CarouselItem>
+                   </CarouselContent>
+               </Carousel>
            </div>
         </div>
     );

@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": "4",
+      "projectname": "Kabserve",
+      "year": "2025",
+      "location": "Cavite State University",
+      "tools": ["Next.js", "TypeScript", "JavaScript"],
+      "github": "https://github.coma/waffensultan/kabserve",
+      "description": "Kabserve is a platform that helps current and incoming Cavite State University students discover campus organizations that match their interests, making it easier to find the right community."
+    },
+    {
+      "id": "3",
+      "projectname": "NameThat",
+      "year": "2025",
+      "location": "Base Global Buildathon",
+      "tools": ["Next.js", "TypeScript", "JavaScript", "MiniKit", "OnChainKit", "Supabase", "Wagmi"],
+      "github": "https://github.com/kurtoswill/NameThat",
+      "description": "NameThat is a community-driven naming platform where users upload images and crowdsource creative name suggestions through voting or open submissions. Built on the Base blockchain, it brings transparency and ownership to collaborative naming."
+    },
+    {
+      "id": "2",
+      "projectname": "AdoptMe",
+      "year": "2024",
+      "location": "Cavite State University",
+      "tools": ["HTML", "CSS"],
+      "github": "https://github.com/waffensultan/itc-website",
+      "description": "AdoptMe was our project for Introduction to Computing—a neobrutalist-style platform designed for pet shelters to share information about adoptable animals. It aimed to promote pet adoption by making it easy for users to browse available pets and learn about their stories."
+    },
+    {
+      "id": "1",
+      "projectname": "AWS Spade Website",
+      "year": "2024",
+      "location": "Cavite State University",
+      "tools": ["Next.js", "TypeScript", "JavaScript"],
+      "github": "https://github.com/AWSLC-Spade/AWSLC-SPADE",
+      "description": "I was tasked as a student developer under AWS Spade to build our organization’s website—my first real experience using Next.js. It marked the beginning of my journey into web development, where I discovered my passion for creating clean, functional, and responsive user interfaces. This project laid the foundation for everything I’ve built since."
+    }
+  ]
+}

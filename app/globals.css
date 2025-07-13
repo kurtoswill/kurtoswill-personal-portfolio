@@ -1,26 +1,84 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-/* Custom CSS variables */
+/* Define a custom variant if needed */
+@custom-variant dark (&:is(.dark *));
+
+/* ===============================
+   Global CSS Variables (Light)
+   =============================== */
 :root {
+  --transition: all 0.3s ease-in-out;
+  --radius: 0.625rem;
+
+  /* Deep navy background */
   --background: #02021A;
   --foreground: #ffffff;
-  --transition: all 0.3s ease-in-out;
+
+  /* Component colors */
+  --card: #02021A;
+  --card-foreground: #ffffff;
+  --popover: #02021A;
+  --popover-foreground: #ffffff;
+  --primary: #6b21a8; /* optional purple */
+  --primary-foreground: #ffffff;
+
+  --secondary: #1e1b4b;
+  --secondary-foreground: #ffffff;
+
+  --muted: #2a235f;
+  --muted-foreground: #cccccc;
+
+  --accent: #3b2f70;
+  --accent-foreground: #ffffff;
+
+  --destructive: #e11d48;
+  --border: #3c3c63;
+  --input: #3c3c63;
+  --ring: #6b21a8;
+
+  --sidebar: #1e1b4b;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #6b21a8;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #3b2f70;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #3c3c63;
+  --sidebar-ring: #6b21a8;
 }
 
-/* Base reset and font setup */
+/* ===============================
+   Dark Theme Override (Optional)
+   =============================== */
+.dark {
+  --background: #02021A;
+  --foreground: #ffffff;
+  --card: #111122;
+  --card-foreground: #ffffff;
+  --popover: #111122;
+  --popover-foreground: #ffffff;
+
+  /* You can tweak the dark values here */
+}
+
+/* ===============================
+   Base Reset & Typography
+   =============================== */
 @layer base {
-  * {
+  *,
+  *::before,
+  *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    @apply border-border outline-ring/50;
   }
 
   html, body {
     height: 100%;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background);
-    color: var(--foreground);
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    @apply bg-background text-foreground;
   }
 
   a {
@@ -29,11 +87,21 @@
     transition: var(--transition);
   }
 
+  button {
+    font-family: inherit;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
   img,
   svg {
     transition: var(--transition);
   }
 }
+
+/* ===============================
+   Custom Button Hover Animation
+   =============================== */
 @layer components {
   .animated-border {
     position: relative;
@@ -58,7 +126,7 @@
 
   .animated-border:hover {
     border-color: white;
-    color: #02021A; /* text becomes dark on hover */
+    color: #02021A; /* match the deep bg */
   }
 
   .animated-border:hover::before {
@@ -66,4 +134,39 @@
   }
 }
 
+/* ===============================
+   Inline Theme Mapping (ShadCN)
+   =============================== */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
