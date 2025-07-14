@@ -3,18 +3,22 @@ import Link from "next/link";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const menuRef = useRef(null);
-    const buttonRef = useRef(null);
+    const menuRef = useRef<HTMLDivElement | null>(null);
+    const buttonRef = useRef<HTMLButtonElement | null>(null);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (menuRef.current &&
-                !menuRef.current.contains(event.target) &&
-                !buttonRef.current.contains(event.target)) {
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as Node;
+            if (
+                menuRef.current &&
+                !menuRef.current.contains(target) &&
+                buttonRef.current &&
+                !buttonRef.current.contains(target)
+            ) {
                 setIsMenuOpen(false);
             }
         };
@@ -29,7 +33,7 @@ const Navbar = () => {
     }, [isMenuOpen]);
 
     return (
-        <div className="sticky top-6 z-50">
+        <div className="fixed top-10 left-4 right-4 md:left-10 md:right-10 xl:left-20 xl:right-20 z-50">
             <div className="flex justify-between items-center">
                 <h3 className='text-lg font-medium'>
                     <Link href='/' className="hover:opacity-80 transition-opacity duration-200">
@@ -66,6 +70,8 @@ const Navbar = () => {
                     ref={buttonRef}
                     onClick={toggleMenu}
                     className="md:hidden flex flex-col justify-center items-center w-8 h-8 bg-white/10 rounded-lg backdrop-blur-lg shadow hover:bg-white/20 transition-all duration-200"
+                    aria-label="Toggle menu"
+                    aria-expanded={isMenuOpen}
                 >
                     <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
                     <span className={`block w-5 h-0.5 bg-current transition-all duration-300 my-1 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
