@@ -24,15 +24,18 @@ export default function RootLayout({
     return (
         <html lang="en" className={poppins.variable}>
         <body className="antialiased">
-        <div className="relative min-h-screen">
-            <Background />
+        <div className="relative min-h-screen overflow-hidden">
+            <Background position="top" />
             <main className="relative z-10 mx-[200px]">
                 {children}
             </main>
+            <Background position="bottom" />
         </div>
         </body>
         </html>
     );
 }
+
+
 
 
