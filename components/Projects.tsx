@@ -21,15 +21,15 @@ const Projects = () => {
 
                 <div className='flex gap-10'>
                     <Image
-                        src='/image/hero/gdg.png'
+                        src='/image/hero/base-ama.jpg'
                         alt='gdg'
                         width={600} height={600}
                         className='rounded-4xl'
                     />
                     <Image
-                        src='/image/hero/gdg.png'
+                        src='/image/hero/kabserve.png'
                         alt='gdg'
-                        width={600} height={600}
+                        width={875} height={600}
                         className='rounded-4xl'
                     />
                 </div>

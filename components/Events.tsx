@@ -23,9 +23,9 @@ const Events = () => {
                         key={events.id}
                         className="flex gap-20 items-center "
                     >
-                        <Image src={events.image} alt={events.name} width={600} height={600}
-                               className='rounded-4xl'
-                        />
+                       <Image src={events.image} alt={events.name} width={600} height={600}
+                              className='rounded-4xl'
+                       />
 
                         <div className='flex flex-col gap-5'>
                             <h1 className='text-[50px] font-semibold leading-tight'>{events.name}</h1>
