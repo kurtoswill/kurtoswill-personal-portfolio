@@ -16,34 +16,36 @@ import Events from "@/components/Events";
 
 const Page = () => {
     return (
-        <div className='pb-[50px]'>
+        <div className='pb-[50px] px-4 md:px-6 lg:px-8'>
             <Navbar />
 
-            <div className="flex flex-col items-center justify-center gap-8 mt-[80px]">
-                <h1 className="font-bold text-[80px] text-center leading-tight">
+            <div className="flex flex-col items-center justify-center gap-6 md:gap-8 mt-[60px] md:mt-[100px]">
+                <h1 className="font-bold text-[28px] sm:text-[48px] md:text-[64px] lg:text-[80px] text-center leading-tight">
                     Kurt, Web Developer <br /> Based in the Philippines
                 </h1>
 
-                <p className="font-medium text-[21px] text-center max-w-[700px]">
+                <p className="font-medium text-[16px] sm:text-[18px] md:text-[21px] text-center max-w-[90%] md:max-w-[700px] px-4">
                     Building fast, responsive websites and growing through tech events.
                 </p>
 
-                <div className="flex gap-4 mb-[80px]">
-                    <button className="animated-border font-medium text-lg py-3 px-6 rounded-full bg-white/10 shadow">
+                <div className="flex flex-row sm:flex-row gap-4 mb-[60px] md:mb-[60px]">
+                    <button className="animated-border font-medium text-base md:text-lg py-3 px-6 rounded-full bg-white/10 shadow">
                         Competitions
                     </button>
 
-                    <button className="animated-border font-medium text-lg py-3 px-6 rounded-full bg-white/10 shadow">
+                    <button className="animated-border font-medium text-base md:text-lg py-3 px-6 rounded-full bg-white/10 shadow">
                         Tech Events
                     </button>
                 </div>
 
                 <CarouselContainer />
 
-                <h1 className='text-[40px] font-medium mt-[50px]'>The Stack Behind the Build</h1>
+                <h1 className='text-[28px] sm:text-[32px] md:text-[40px] font-medium mt-[40px] md:mt-[50px] text-center px-4'>
+                    The Stack Behind the Build
+                </h1>
                 <TechStack />
 
-                <div className='bg-white w-screen rounded-t-[80px] mt-[100px] px-[200px] py-[150px] flex flex-col gap-10 rounded-b-[80px]'>
+                <div className='bg-white w-screen rounded-t-[40px] md:rounded-t-[80px] mt-[80px] md:mt-[100px] px-4 sm:px-8 md:px-16 lg:px-[100px] xl:px-[200px] py-[80px] md:py-[150px] flex flex-col gap-10 rounded-b-[40px] md:rounded-b-[80px]'>
                     <About />
                     <Skills />
                     <Projects />
@@ -52,28 +54,34 @@ const Page = () => {
                 </div>
             </div>
 
-            <h1 className='text-[100px] mt-15 text-center'>Let’s Talk Tech & Possibilities</h1>
+            <h1 className='text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] mt-10 md:mt-15 text-center px-4 leading-tight'>
+                Let's Talk Tech & Possibilities
+            </h1>
 
-            <div className='px-[100px] mt-10 flex justify-between'>
-                <div className='flex flex-col gap-2'>
-                    <p className='text-md opacity-50'>Email</p>
-                    <p className='text-2xl'>kurtoswillmc@gmail.com</p>
-                </div>
-                <div className='flex flex-col gap-2'>
-                    <p className='text-md opacity-50'>Phone number</p>
-                    <p className='text-2xl'>+63 966 018 7382</p>
+            <div className='px-4 sm:px-8 md:px-16 lg:px-[100px] mt-6 md:mt-10 flex flex-col lg:flex-row gap-8 lg:gap-0 lg:justify-between'>
+                {/* Contact Info */}
+                <div className='flex flex-col sm:flex-row lg:flex-col gap-6 sm:gap-8 lg:gap-6'>
+                    <div className='flex flex-col gap-2'>
+                        <p className='text-sm md:text-md opacity-50'>Email</p>
+                        <p className='text-lg md:text-2xl break-all'>kurtoswillmc@gmail.com</p>
+                    </div>
+                    <div className='flex flex-col gap-2'>
+                        <p className='text-sm md:text-md opacity-50'>Phone number</p>
+                        <p className='text-lg md:text-2xl'>+63 966 018 7382</p>
+                    </div>
                 </div>
 
-                <div className='flex flex-col gap-2'>
+                {/* Contact Form */}
+                <div className='flex flex-col gap-2 w-full lg:w-auto lg:min-w-[400px]'>
                     <Label htmlFor="email">Email</Label>
                     <Input type="email" id="email" placeholder="Email" className='mb-2'/>
 
                     <Label htmlFor="message">Your message</Label>
-                    <Textarea placeholder="Type your message here." id="message" />
+                    <Textarea placeholder="Type your message here." id="message" className="min-h-[120px]" />
 
                     <button
                         type="submit"
-                        className="animated-border font-medium text-lg py-3 px-6 rounded-full bg-white/10 shadow mt-5"
+                        className="animated-border font-medium text-base md:text-lg py-3 px-6 rounded-full bg-white/10 shadow mt-5 w-full sm:w-auto"
                     >
                         Send
                     </button>
@@ -81,17 +89,17 @@ const Page = () => {
             </div>
 
             <hr
-                className="border-b-[1px] border-white/20 mt-5 mx-[100px]"
+                className="border-b-[1px] border-white/20 mt-8 md:mt-5 mx-4 sm:mx-8 md:mx-16 lg:mx-[100px]"
             />
 
-            <footer className='px-[100px] pt-[50px] flex justify-between items-center'>
-                <p>{'\u00A9'} 2025 Kurt Oswill McCarver. All rights reserved.</p>
+            <footer className='px-4 sm:px-8 md:px-16 lg:px-[100px] pt-[30px] md:pt-[50px] flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between items-center'>
+                <p className='text-sm md:text-base text-center sm:text-left'>{'\u00A9'} 2025 Kurt Oswill McCarver. All rights reserved.</p>
 
                 <div className='flex gap-2'>
                     <Image src='/icons/github.png' alt='github' width={40} height={40}
-                        className='bg-white rounded-full p-1 cursor-pointer'
+                           className='bg-white rounded-full p-1 cursor-pointer'
                     />
-                    <Image src='/icons/linkedin.png' alt='github' width={40} height={40}
+                    <Image src='/icons/linkedin.png' alt='linkedin' width={40} height={40}
                            className='bg-white rounded-full p-1 cursor-pointer'
                     />
                 </div>

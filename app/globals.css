@@ -171,9 +171,33 @@
 
   .slide {
     flex-shrink: 0;
-    width: 500px;
-    height: 500px;
-    margin-right: 20px;
+    width: 280px;
+    height: 280px;
+    margin-right: 12px;
+  }
+
+  @media (min-width: 640px) {
+    .slide {
+      width: 350px;
+      height: 350px;
+      margin-right: 16px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .slide {
+      width: 400px;
+      height: 400px;
+      margin-right: 20px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .slide {
+      width: 500px;
+      height: 500px;
+      margin-right: 24px;
+    }
   }
 
   @keyframes scroll {
