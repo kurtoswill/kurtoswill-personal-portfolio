@@ -1,6 +1,17 @@
 {
   "projects": [
     {
+      "id": "5",
+      "projectname": "PlanPal",
+      "year": "2025",
+      "location": "Cavite State University",
+      "tools": ["Next.js", "TypeScript", "JavaScript"],
+      "github": "https://github.com/kurtoswill/plan-pal",
+      "description": "PlanPal is a shared fund tracker for organizations with transparent spending and refunds.",
+      "image": "/image/projects/planpal.png",
+      "preview": ""
+    },
+    {
       "id": "4",
       "projectname": "Kabserve",
       "year": "2025",
