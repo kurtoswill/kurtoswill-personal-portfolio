@@ -3,16 +3,25 @@ import Link from "next/link";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isHighlightsOpen, setIsHighlightsOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement | null>(null);
     const buttonRef = useRef<HTMLButtonElement | null>(null);
+    const highlightsRef = useRef<HTMLDivElement | null>(null);
+    const highlightsTriggerRef = useRef<HTMLLIElement | null>(null);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const toggleHighlights = () => {
+        setIsHighlightsOpen(!isHighlightsOpen);
+    };
+
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             const target = event.target as Node;
+
+            // Handle mobile menu click outside
             if (
                 menuRef.current &&
                 !menuRef.current.contains(target) &&
@@ -21,16 +30,26 @@ const Navbar = () => {
             ) {
                 setIsMenuOpen(false);
             }
+
+            // Handle highlights dropdown click outside
+            if (
+                highlightsRef.current &&
+                !highlightsRef.current.contains(target) &&
+                highlightsTriggerRef.current &&
+                !highlightsTriggerRef.current.contains(target)
+            ) {
+                setIsHighlightsOpen(false);
+            }
         };
 
-        if (isMenuOpen) {
+        if (isMenuOpen || isHighlightsOpen) {
             document.addEventListener('mousedown', handleClickOutside);
         }
 
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [isMenuOpen]);
+    }, [isMenuOpen, isHighlightsOpen]);
 
     return (
         <div className="fixed top-10 left-4 right-4 md:left-10 md:right-10 xl:left-20 xl:right-20 z-50">
@@ -53,10 +72,41 @@ const Navbar = () => {
                             Projects
                         </Link>
                     </li>
-                    <li>
-                        <Link href='/highlights' className="hover:opacity-80 transition-opacity duration-200">
+                    <li ref={highlightsTriggerRef} className="relative">
+                        <button
+                            onClick={toggleHighlights}
+                            className="hover:opacity-80 transition-opacity duration-200 flex items-center gap-1"
+                        >
                             Highlights
-                        </Link>
+                            <svg
+                                className={`w-4 h-4 transition-transform duration-200 ${isHighlightsOpen ? 'rotate-180' : ''}`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        {/* Highlights Dropdown */}
+                        {isHighlightsOpen && (
+                            <div ref={highlightsRef} className="absolute top-10 left-0 mt-2 bg-white/10 backdrop-blur-lg rounded-lg shadow-lg py-2 min-w-48">
+                                <Link
+                                    href='/tech-events'
+                                    onClick={() => setIsHighlightsOpen(false)}
+                                    className="block px-4 py-2 hover:bg-white/10 transition-colors duration-200"
+                                >
+                                    Tech Events
+                                </Link>
+                                <Link
+                                    href='/competitions'
+                                    onClick={() => setIsHighlightsOpen(false)}
+                                    className="block px-4 py-2 hover:bg-white/10 transition-colors duration-200"
+                                >
+                                    Competitions
+                                </Link>
+                            </div>
+                        )}
                     </li>
                     <li>
                         <Link href='/contact' className="hover:opacity-80 transition-opacity duration-200">
@@ -104,13 +154,46 @@ const Navbar = () => {
                         </li>
                         <li className="border-b border-white/20 mx-2"></li>
                         <li>
-                            <Link
-                                href='/highlights'
-                                onClick={() => setIsMenuOpen(false)}
-                                className="block py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200"
+                            <button
+                                onClick={toggleHighlights}
+                                className="w-full text-left py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200 flex items-center justify-between"
                             >
                                 Highlights
-                            </Link>
+                                <svg
+                                    className={`w-4 h-4 transition-transform duration-200 ${isHighlightsOpen ? 'rotate-180' : ''}`}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            {/* Mobile Highlights Dropdown */}
+                            {isHighlightsOpen && (
+                                <div className="pl-4 py-2">
+                                    <Link
+                                        href='/highlights/tech-events'
+                                        onClick={() => {
+                                            setIsHighlightsOpen(false);
+                                            setIsMenuOpen(false);
+                                        }}
+                                        className="block py-2 px-2 hover:bg-white/10 rounded-md transition-colors duration-200 text-base"
+                                    >
+                                        Tech Events
+                                    </Link>
+                                    <Link
+                                        href='/highlights/competitions'
+                                        onClick={() => {
+                                            setIsHighlightsOpen(false);
+                                            setIsMenuOpen(false);
+                                        }}
+                                        className="block py-2 px-2 hover:bg-white/10 rounded-md transition-colors duration-200 text-base"
+                                    >
+                                        Competitions
+                                    </Link>
+                                </div>
+                            )}
                         </li>
                         <li className="border-b border-white/20 mx-2"></li>
                         <li>
