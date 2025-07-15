@@ -1,15 +1,24 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
-import Link from "next/link";
+import { useRouter, usePathname } from 'next/navigation';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [inSection, setInSection] = useState(false);
     const menuRef = useRef<HTMLDivElement | null>(null);
     const buttonRef = useRef<HTMLButtonElement | null>(null);
+
+    const router = useRouter();
+    const pathname = usePathname();
+
+    const sectionIds = ['about', 'projects', 'competitions', 'events', 'contact'];
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    // Handle outside click to close mobile menu
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             const target = event.target as Node;
@@ -32,37 +41,74 @@ const Navbar = () => {
         };
     }, [isMenuOpen]);
 
+    // Observe sections to change navbar background
+    useEffect(() => {
+        const observers: IntersectionObserver[] = [];
+        let visibleSections = new Set<string>();
+
+        sectionIds.forEach((id) => {
+            const section = document.getElementById(id);
+            if (!section) return;
+
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        visibleSections.add(id);
+                    } else {
+                        visibleSections.delete(id);
+                    }
+                    setInSection(visibleSections.size > 0);
+                },
+                { threshold: 0.1 }
+            );
+
+            observer.observe(section);
+            observers.push(observer);
+        });
+
+        return () => {
+            observers.forEach((observer) => observer.disconnect());
+        };
+    }, []);
+
+    // Navigate to section, even from a different page
+    const handleNavClick = (id: string) => {
+        setIsMenuOpen(false);
+
+        if (pathname === '/') {
+            const section = document.getElementById(id);
+            section?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            router.push(`/#${id}`);
+        }
+    };
+
     return (
-        <div className="fixed top-10 left-4 right-4 md:left-10 md:right-10 xl:left-20 xl:right-20 z-50">
+        <div
+            className={`fixed top-10 left-4 right-4 md:left-10 md:right-10 xl:left-20 xl:right-20 z-50 transition-colors duration-300 rounded-full px-10 ${
+                inSection ? 'bg-[#02021A]' : 'bg-transparent'
+            }`}
+        >
             <div className="flex justify-between items-center">
                 <h3 className='text-lg font-medium'>
-                    <Link href='/' className="hover:opacity-80 transition-opacity duration-200">
+                    <button
+                        onClick={() => {
+                            setIsMenuOpen(false);
+                            router.push('/');
+                        }}
+                        className="hover:opacity-80 transition-opacity duration-200"
+                    >
                         Kurt Oswill
-                    </Link>
+                    </button>
                 </h3>
 
                 {/* Desktop Menu */}
                 <ul className='hidden md:flex gap-8 font-medium text-lg shadow bg-white/10 py-3 px-6 rounded-full backdrop-blur-lg'>
-                    <li>
-                        <Link href='/about' className="hover:opacity-80 transition-opacity duration-200">
-                            About Me
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href='/projects' className="hover:opacity-80 transition-opacity duration-200">
-                            Projects
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href='/highlights' className="hover:opacity-80 transition-opacity duration-200">
-                            Highlights
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href='/contact' className="hover:opacity-80 transition-opacity duration-200">
-                            Contact
-                        </Link>
-                    </li>
+                    <li><button onClick={() => handleNavClick('about')} className="hover:opacity-80 transition-opacity duration-200">About Me</button></li>
+                    <li><button onClick={() => handleNavClick('projects')} className="hover:opacity-80 transition-opacity duration-200">Projects</button></li>
+                    <li><button onClick={() => handleNavClick('competitions')} className="hover:opacity-80 transition-opacity duration-200">Competitions</button></li>
+                    <li><button onClick={() => handleNavClick('events')} className="hover:opacity-80 transition-opacity duration-200">Tech Events</button></li>
+                    <li><button onClick={() => handleNavClick('contact')} className="hover:opacity-80 transition-opacity duration-200">Contact</button></li>
                 </ul>
 
                 {/* Mobile Hamburger Button */}
@@ -79,49 +125,19 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {/* Mobile Menu - Full Width */}
+            {/* Mobile Menu */}
             {isMenuOpen && (
-                <div ref={menuRef} className="md:hidden absolute top-12 left-0 right-0 bg-white/10 backdrop-blur-lg rounded-lg shadow-lg py-3 px-4 mx-0">
+                <div ref={menuRef} className="md:hidden absolute top-12 left-0 right-0 bg-[#02021A] backdrop-blur-lg rounded-lg shadow-lg py-2 px-4 mx-0">
                     <ul className='flex flex-col font-medium text-lg'>
-                        <li>
-                            <Link
-                                href='/about'
-                                onClick={() => setIsMenuOpen(false)}
-                                className="block py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200"
-                            >
-                                About Me
-                            </Link>
-                        </li>
+                        <li><button onClick={() => handleNavClick('about')} className="block w-full text-left py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200">About Me</button></li>
                         <li className="border-b border-white/20 mx-2"></li>
-                        <li>
-                            <Link
-                                href='/projects'
-                                onClick={() => setIsMenuOpen(false)}
-                                className="block py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200"
-                            >
-                                Projects
-                            </Link>
-                        </li>
+                        <li><button onClick={() => handleNavClick('projects')} className="block w-full text-left py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200">Projects</button></li>
                         <li className="border-b border-white/20 mx-2"></li>
-                        <li>
-                            <Link
-                                href='/highlights'
-                                onClick={() => setIsMenuOpen(false)}
-                                className="block py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200"
-                            >
-                                Highlights
-                            </Link>
-                        </li>
+                        <li><button onClick={() => handleNavClick('competitions')} className="block w-full text-left py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200">Competitions</button></li>
                         <li className="border-b border-white/20 mx-2"></li>
-                        <li>
-                            <Link
-                                href='/contact'
-                                onClick={() => setIsMenuOpen(false)}
-                                className="block py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200"
-                            >
-                                Contact
-                            </Link>
-                        </li>
+                        <li><button onClick={() => handleNavClick('events')} className="block w-full text-left py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200">Tech Events</button></li>
+                        <li className="border-b border-white/20 mx-2"></li>
+                        <li><button onClick={() => handleNavClick('contact')} className="block w-full text-left py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200">Contact</button></li>
                     </ul>
                 </div>
             )}

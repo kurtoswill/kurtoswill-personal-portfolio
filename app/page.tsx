@@ -20,7 +20,7 @@ const Page = () => {
             <Navbar />
 
             <div className="flex flex-col items-center justify-center gap-6 md:gap-8 mt-[60px] md:mt-[100px]">
-                <h1 className="font-bold text-[28px] sm:text-[48px] md:text-[64px] lg:text-[80px] text-center leading-tight mt-10">
+                <h1 className="font-bold text-[28px] sm:text-[48px] md:text-[64px] lg:text-[80px] text-center leading-tight mt-[150px]">
                     Kurt, Web Developer <br /> Based in the Philippines
                 </h1>
 
@@ -46,11 +46,21 @@ const Page = () => {
                 <TechStack />
 
                 <div className='bg-white w-screen rounded-t-[40px] md:rounded-t-[80px] mt-[80px] md:mt-[100px] px-4 sm:px-8 md:px-16 lg:px-[100px] xl:px-[200px] py-[80px] md:py-[150px] flex flex-col gap-10 rounded-b-[40px] md:rounded-b-[80px]'>
-                    <About />
-                    <Skills />
-                    <Projects />
-                    <Competitions />
-                    <Events />
+                    <section id={'about'} className='scroll-mt-[275px]'>
+                        <About />
+                    </section>
+                    <section>
+                        <Skills />
+                    </section>
+                    <section id={'projects'} className='scroll-mt-[75px]'>
+                        <Projects />
+                    </section>
+                    <section id={'competitions'} className='scroll-mt-[25px]'>
+                        <Competitions />
+                    </section>
+                    <section id={'events'} className='scroll-mt-[10px]'>
+                        <Events />
+                    </section>
                 </div>
             </div>
 
@@ -72,7 +82,7 @@ const Page = () => {
                 </div>
 
                 {/* Contact Form */}
-                <div className='flex flex-col gap-2 w-full lg:w-auto lg:min-w-[400px]'>
+                <div className='flex flex-col gap-2 w-full lg:w-auto lg:min-w-[400px]' id={'contact'}>
                     <Label htmlFor="email">Email</Label>
                     <Input type="email" id="email" placeholder="Email" className='mb-2'/>
 
