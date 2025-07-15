@@ -7,7 +7,9 @@
       "location": "Cavite State University",
       "tools": ["Next.js", "TypeScript", "JavaScript"],
       "github": "https://github.coma/waffensultan/kabserve",
-      "description": "Kabserve is a platform that helps current and incoming Cavite State University students discover campus organizations that match their interests, making it easier to find the right community."
+      "description": "Kabserve connects Cavite State University students with campus organizations that match their interests.",
+      "image": "/image/projects/kabserve.png",
+      "preview": ""
     },
     {
       "id": "3",
@@ -16,7 +18,9 @@
       "location": "Base Global Buildathon",
       "tools": ["Next.js", "TypeScript", "JavaScript", "MiniKit", "OnChainKit", "Supabase", "Wagmi"],
       "github": "https://github.com/kurtoswill/NameThat",
-      "description": "NameThat is a community-driven naming platform where users upload images and crowdsource creative name suggestions through voting or open submissions. Built on the Base blockchain, it brings transparency and ownership to collaborative naming."
+      "description": "NameThat lets users crowdsource creative names for images, powered by the Base blockchain.",
+      "image": "/image/projects/namethat.jpg",
+      "preview": ""
     },
     {
       "id": "2",
@@ -25,7 +29,9 @@
       "location": "Cavite State University",
       "tools": ["HTML", "CSS"],
       "github": "https://github.com/waffensultan/itc-website",
-      "description": "AdoptMe was our project for Introduction to Computing—a neobrutalist-style platform designed for pet shelters to share information about adoptable animals. It aimed to promote pet adoption by making it easy for users to browse available pets and learn about their stories."
+      "description": "AdoptMe helps shelters share adoptable pets and their stories to promote easy adoption.",
+      "image": "/image/projects/no-image.jpeg",
+      "preview": ""
     },
     {
       "id": "1",
@@ -34,7 +40,9 @@
       "location": "Cavite State University",
       "tools": ["Next.js", "TypeScript", "JavaScript"],
       "github": "https://github.com/AWSLC-Spade/AWSLC-SPADE",
-      "description": "I was tasked as a student developer under AWS Spade to build our organization’s website—my first real experience using Next.js. It marked the beginning of my journey into web development, where I discovered my passion for creating clean, functional, and responsive user interfaces. This project laid the foundation for everything I’ve built since."
+      "description": "We built our organizations website under AWS Spade—my first Next.js project and the start of my web dev journey.",
+      "image": "/image/projects/no-image.jpeg",
+      "preview": ""
     }
   ]
 }

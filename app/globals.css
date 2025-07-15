@@ -125,7 +125,37 @@
     animation: marquee-left 20s linear infinite;
   }
 
+  .animated-border-inverted {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+    color: #02021A;
+    z-index: 0;
+  }
 
+  .animated-border-inverted::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #02021A;
+    z-index: -1;
+    transition: width 0.4s ease;
+  }
+
+  .animated-border-inverted:hover {
+    border-color: #02021A;
+    color: white;
+  }
+
+  .animated-border-inverted:hover::before {
+    width: 100%;
+  }
+
+  /* Separator */
 
   .animated-border {
     position: relative;

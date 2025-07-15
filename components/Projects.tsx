@@ -12,11 +12,13 @@ const Projects = () => {
                         </h1>
                     </div>
                     <div>
-                        <button
-                            className="border border-[#02021A] rounded-full px-4 py-2 sm:px-5 sm:py-3 md:px-6 md:py-5 transition-all ease-in-out hover:bg-[#02021A] cursor-pointer hover:text-white text-base sm:text-xl md:text-2xl"
-                        >
-                            See More
-                        </button>
+                        <a href='/projects'>
+                            <button
+                                className="animated-border-inverted px-4 py-2 sm:px-5 sm:py-3 md:px-6 md:py-5 transition-all ease-in-out border-[#02021A] rounded-full hover:text-white text-base sm:text-xl md:text-2xl"
+                            >
+                                See More
+                            </button>
+                        </a>
                     </div>
                 </div>
 
