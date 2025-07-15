@@ -13,11 +13,11 @@ const Page = () => {
 
             {/* Header */}
             <div className="flex flex-col items-center justify-center gap-6 md:gap-8 px-4">
-                <h1 className='mt-[100px] font-bold text-[24px] sm:text-[36px] md:text-[48px] lg:text-[64px] text-center leading-tight'>
+                <h1 className="mt-[100px] sm:mt-[150px] font-bold text-[30px] sm:text-[48px] md:text-[64px] lg:text-[80px] text-center leading-tight">
                     Ideas Into Interfaces,<br />
                     Code Into Connection
                 </h1>
-                <p className="font-medium text-[14px] sm:text-[16px] md:text-[18px] max-w-[90%] md:max-w-[700px] text-center">
+                <p className="font-medium text-[16px] sm:text-[18px] md:text-[21px] text-center max-w-[90%] md:max-w-[700px] px-4">
                     Projects that transform ideas into experiences through design and development.
                 </p>
             </div>
