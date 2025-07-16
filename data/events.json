@@ -1,6 +1,16 @@
 {
   "events": [
     {
+      "id": "9",
+      "name": "Sonic Blockchain Boot Camp",
+      "skills": ["Networking", "Blockchain"],
+      "location": "Mega Towers",
+      "year": "2025",
+      "link": "https://www.linkedin.com/posts/kurt-oswill_great-energy-at-philippine-blockchain-week-activity-7345003332031168512-pM9s?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+      "image": "/image/events/smxpbw.jpeg",
+      "description": "The Sonic Blockchain Code Camp offered a foundational introduction to blockchain development and crypto trading. We gained basic experience with Solidity smart contracts using Sonic, including how to mint digital assets, taught by Sir Koleen. Trade Life Hood covered the basics of cryptocurrency trading. This camp provided essential entry-level skills for exploring the blockchain and crypto space."
+    },
+    {
       "id": "8",
       "name": "Philippine Blockchain Week",
       "skills": ["Networking", "Blockchain"],

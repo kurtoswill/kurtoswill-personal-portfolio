@@ -44,9 +44,11 @@ const Events = () => {
                     </div>
                 ))}
 
-                <button className='border border-[#02021A] rounded-full px-4 sm:px-6 py-3 sm:py-5 transition-all ease-in-out hover:bg-[#02021A] cursor-pointer font-medium hover:text-white text-base sm:text-xl self-center md:self-end'>
-                    Show All Events
-                </button>
+                <a href='/events' className='flex justify-center md:justify-end'>
+                    <button className='border border-[#02021A] rounded-full px-4 sm:px-6 py-3 sm:py-5 transition-all ease-in-out hover:bg-[#02021A] cursor-pointer font-medium hover:text-white text-base sm:text-xl'>
+                        Show All Events
+                    </button>
+                </a>
             </div>
         </div>
     );
