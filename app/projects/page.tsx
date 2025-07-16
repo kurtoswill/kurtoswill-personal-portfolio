@@ -35,7 +35,7 @@ const Page = () => {
                                 alt={project.projectname}
                                 width={400}
                                 height={400}
-                                className='rounded-2xl w-full h-auto shadow-2xl'
+                                className='rounded-lg w-full h-auto shadow-2xl'
                             />
 
                             <div className='flex flex-col gap-2 sm:gap-3 text-left'>

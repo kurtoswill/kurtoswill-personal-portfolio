@@ -30,7 +30,7 @@
       "tools": ["Next.js", "TypeScript", "JavaScript", "MiniKit", "OnChainKit", "Supabase", "Wagmi"],
       "github": "https://github.com/kurtoswill/NameThat",
       "description": "NameThat lets users crowdsource creative names for images, powered by the Base blockchain.",
-      "image": "/image/projects/namethat.jpg",
+      "image": "/image/projects/namethat.png",
       "preview": ""
     },
     {
