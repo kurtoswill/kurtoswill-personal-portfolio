@@ -5,9 +5,9 @@
       "name": "Sonic Blockchain Boot Camp",
       "skills": ["Networking", "Blockchain"],
       "location": "Mega Towers",
-      "year": "2025",
+      "year": "July 2025",
       "link": "https://www.linkedin.com/posts/kurt-oswill_great-energy-at-philippine-blockchain-week-activity-7345003332031168512-pM9s?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
-      "image": "/image/events/sonic.jpg",
+      "image": "/image/events/sonic.png",
       "description": "The Sonic Blockchain Code Camp offered a foundational introduction to blockchain development and crypto trading. We gained basic experience with Solidity smart contracts using Sonic, including how to mint digital assets, taught by Sir Koleen. Trade Life Hood covered the basics of cryptocurrency trading. This camp provided essential entry-level skills for exploring the blockchain and crypto space."
     },
     {
@@ -15,9 +15,9 @@
       "name": "Philippine Blockchain Week",
       "skills": ["Networking", "Blockchain"],
       "location": "SMX Convention Center",
-      "year": "2025",
+      "year": "June 2025",
       "link": "https://www.linkedin.com/posts/kurt-oswill_great-energy-at-philippine-blockchain-week-activity-7345003332031168512-pM9s?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
-      "image": "/image/events/pbw.jpg",
+      "image": "/image/events/pbw.png",
       "description": "Incredible energy from the local Web3 community — builders, founders, and thought leaders all in one space. The Philippines continues to rise as a hub for blockchain innovation.\n\nGreat reconnecting with Sir Emmanuel Ignacio of Coins.ph (last saw each other at Blockchain Decoders), and for the highlight of the week: Crypto Fight Night — unforgettable!"
     },
     {
@@ -25,7 +25,7 @@
       "name": "CryptoBilis",
       "skills": ["Business", "Networking", "Blockchain"],
       "location": "Metrotent, Pasig",
-      "year": "2025",
+      "year": "June 2025",
       "link": "https://www.linkedin.com/posts/kurt-oswill_thank-you-to-christine-mae-chavez-for-the-activity-7345001888511115265-1TRC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
       "image": "/image/events/pizzaday.png",
       "description": "Thanks to Christine Mae Chavez (Metapool) and Base Philippines for the invite! Great to connect with Web3 builders, including CoreDAO’s country leads. The CryptoBilis booths were a highlight — full of innovation. Also celebrated my first-ever Pizza Day!"
@@ -35,9 +35,9 @@
       "name": "Based Space",
       "skills": ["Business", "Pitching", "Blockchain"],
       "location": "The Blokc",
-      "year": "2025",
+      "year": "May 2025",
       "link": "https://www.linkedin.com/posts/kurt-oswill_grateful-to-have-joined-an-eye-opening-session-activity-7329663047470342144-gqa5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
-      "image": "/images/events/base.jpg",
+      "image": "/image/events/base.png",
       "description": "Joining the Base Philippines Buildathon was a turning point for our team, TryCatch Us. With mentorship from Eli Becislao, we didn’t just refine our project—we refined our purpose. The experience gave us confidence, clarity, and a stronger bond as builders. To students out there: this is your sign to jump in."
     },
     {
@@ -45,9 +45,9 @@
       "name": "Blockchain Decoders",
       "skills": ["Web3", "Blockchain", "Solidity", "Smart Transactions"],
       "location": "Cavite State University",
-      "year": "2025",
+      "year": "May 2025",
       "link": "https://www.linkedin.com/posts/kurt-oswill_still-buzzing-from-an-inspiring-blockchain-activity-7329659575534518272-RD8v?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
-      "image": "/images/events/decoders.jpg",
+      "image": "/image/events/decoders.jpg",
       "description": "Grateful to have attended the blockchain event at Cavite State University! Huge thanks to Coins.ph, Bitskwela, and Sonic for sharing valuable insights that fueled my curiosity and passion for Web3. Special thanks to Jiro Reyes for the inspiring talk—it reminded me why I started building in the space."
     },
     {
@@ -55,9 +55,9 @@
       "name": "Arduino Day Philippines",
       "skills": ["Arduino"],
       "location": "STI College Cubao",
-      "year": "2025",
+      "year": "March 2025",
       "link": "https://www.linkedin.com/posts/kurt-oswill_last-march-22-we-had-the-opportunity-to-activity-7321444144197890049-Q4E4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
-      "image": "/images/events/arduino.jpg",
+      "image": "/image/events/arduino.jpg",
       "description": "Last March 22, we attended Arduino Day Philippines at STI Cubao—a fun and inspiring event where we saw amazing robots built by students and makers. I was especially moved by how the event uplifted young innovators, providing schools with tools and opportunities to support the next generation of tech builders.\n"
     },
     {
@@ -65,9 +65,9 @@
       "name": "GCash: Good Data for Good",
       "skills": ["FinTech", "AI", "Data"],
       "location": "W City Center",
-      "year": "2025",
+      "year": "March 2025",
       "link": "https://www.linkedin.com/posts/kurt-oswill_on-march-13-our-team-now-dash2impress-activity-7310958363771564033-KVDy?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
-      "image": "/images/events/gdfg.jpg",
+      "image": "/image/events/gdfg.jpg",
       "description": "We had the incredible opportunity to be part of the first-ever GDFG (Good Data for Good) School Caravan, hosted by GCash and led by their Chief Data Officer, Sara Venturina. During the session, we learned directly from industry professionals and even collaborated with previous hackathon winners. The experience deepened our understanding of AI, data, and fintech—and gave us practical insights into how these technologies are applied in the real world. "
     },
     {
@@ -75,19 +75,19 @@
       "name": "DEVCON: Tech Nexus",
       "skills": ["CyberSecurity"],
       "location": "University of Batangas",
-      "year": "2024",
+      "year": "December 2024",
       "link": "https://www.linkedin.com/posts/kurt-oswill_technexus-campussummit2024-campusdevcon-activity-7271509728344567808-zMkN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
-      "image": "/images/events/devcon.jpg",
-      "description": "Thrilled to have attended **Campus DEVCON: Tech Nexus** at the University of Batangas with friends! One of the highlights was joining **DEVCON Kids**, where tech met fun—I even scored the highest in one of their interactive fruit-powered games! Grateful for the opportunity to learn, play, and grow in such an inspiring space. Cheers to more tech events and meaningful connections ahead!\n"
+      "image": "/image/events/devcon.jpg",
+      "description": "Thrilled to have attended Campus DEVCON: Tech Nexus at the University of Batangas with friends! One of the highlights was joining DEVCON Kids, where tech met fun—I even scored the highest in one of their interactive fruit-powered games! Grateful for the opportunity to learn, play, and grow in such an inspiring space. Cheers to more tech events and meaningful connections ahead!"
     },
     {
       "id": "1",
       "name": "AWS KickOff Event",
       "skills": ["Cloud Computing", "Networking"],
       "location": "Cavite State University",
-      "year": "2024",
+      "year": "November 2024",
       "link": "https://www.linkedin.com/posts/kenneth-hular-chop0915_aws-learning-club-spade-november-26-2024-ugcPost-7267202934478651395-ZuBI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
-      "image": "/images/events/kickoff.jpg",
+      "image": "/image/events/aws.jpg",
       "description": "Attending the AWS Learning Club – Spade kick-off was an inspiring experience. Mr. Paul Sears’ insightful talk on cloud computing helped clarify many of my questions about the field. It was a great opportunity to deepen my interest in tech and connect with the CS community at Cavite State University."
     }
   ]

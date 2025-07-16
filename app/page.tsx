@@ -75,6 +75,15 @@ const Page = () => {
                         <p className='text-sm md:text-md opacity-50'>Phone number</p>
                         <p className='text-lg md:text-2xl'>+63 966 018 7382</p>
                     </div>
+                    <div className='flex flex-col gap-2'>
+                        <p className='text-sm md:text-md opacity-50'>Resume</p>
+                        <a className={'text-lg md:text-2xl'}
+                           href={'/resume.pdf'}
+                           target={'_blank'} rel={'noreferrer'}
+                        >
+                            <p className='text-lg md:text-2xl hover:opacity-50 transition-all ease-in-out'>View my Resume</p>
+                        </a>
+                    </div>
                 </div>
 
                 {/* Contact Form */}

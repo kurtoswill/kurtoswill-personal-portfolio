@@ -38,7 +38,7 @@ const Events = () => {
                             <Link href={event.link}
                                   className='opacity-50 hover:opacity-100 transition-all ease-in-out'
                             >
-                                See more
+                                See more in LinkedIn
                             </Link>
                         </div>
                     </div>
