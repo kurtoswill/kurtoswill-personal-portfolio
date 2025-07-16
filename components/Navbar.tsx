@@ -18,7 +18,6 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             const target = event.target as Node;
@@ -40,7 +39,6 @@ const Navbar = () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [isMenuOpen]);
-
 
     useEffect(() => {
         const observers: IntersectionObserver[] = [];
@@ -71,7 +69,6 @@ const Navbar = () => {
         };
     }, []);
 
-
     const handleNavClick = (id: string) => {
         setIsMenuOpen(false);
 
@@ -85,12 +82,12 @@ const Navbar = () => {
 
     return (
         <div
-            className={`fixed top-10 left-4 right-4 md:left-10 md:right-10 xl:left-20 xl:right-20 z-50 transition-colors duration-300 rounded-full px-10 ${
+            className={`w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${
                 inSection ? 'bg-[#02021A]' : 'bg-transparent'
             }`}
         >
-            <div className="flex justify-between items-center">
-                <h3 className='text-lg font-medium'>
+            <div className="max-w-screen-2xl mx-auto flex justify-between items-center px-10 py-10">
+                <h3 className="text-lg font-medium">
                     <button
                         onClick={() => {
                             setIsMenuOpen(false);
@@ -103,7 +100,7 @@ const Navbar = () => {
                 </h3>
 
                 {/* Desktop Menu */}
-                <ul className='hidden md:flex gap-8 font-medium text-lg shadow bg-white/10 py-3 px-6 rounded-full backdrop-blur-lg'>
+                <ul className="hidden md:flex gap-8 font-medium text-lg bg-white/10 py-3 px-6 rounded-full backdrop-blur-lg shadow">
                     <li><button onClick={() => handleNavClick('about')} className="hover:opacity-80 transition-opacity duration-200">About Me</button></li>
                     <li><button onClick={() => handleNavClick('projects')} className="hover:opacity-80 transition-opacity duration-200">Projects</button></li>
                     <li><button onClick={() => handleNavClick('competitions')} className="hover:opacity-80 transition-opacity duration-200">Competitions</button></li>
@@ -127,8 +124,8 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div ref={menuRef} className="md:hidden absolute top-12 left-0 right-0 bg-[#02021A] backdrop-blur-lg rounded-lg shadow-lg py-2 px-4 mx-0">
-                    <ul className='flex flex-col font-medium text-lg'>
+                <div ref={menuRef} className="md:hidden bg-[#02021A] backdrop-blur-lg rounded-b-lg shadow-lg py-2 px-4">
+                    <ul className="flex flex-col font-medium text-lg">
                         <li><button onClick={() => handleNavClick('about')} className="block w-full text-left py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200">About Me</button></li>
                         <li className="border-b border-white/20 mx-2"></li>
                         <li><button onClick={() => handleNavClick('projects')} className="block w-full text-left py-3 px-2 hover:bg-white/10 rounded-md transition-colors duration-200">Projects</button></li>

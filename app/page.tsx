@@ -7,12 +7,11 @@ import Navbar from "@/components/Navbar";
 import CarouselContainer from "@/components/CarouselContainer";
 import Image from "next/image";
 import { Textarea } from "@/components/ui/textarea"
-import TechStack from "@/components/TechStack";
 import About from "@/components/About";
-import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Competitions from "@/components/Competitions";
 import Events from "@/components/Events";
+import Skills from "@/components/Skills";
 
 const Page = () => {
     return (
@@ -30,20 +29,17 @@ const Page = () => {
 
                 <div className="flex flex-row sm:flex-row gap-4 mb-[60px] md:mb-[60px]">
                     <button className="animated-border font-medium text-base md:text-lg py-3 px-6 rounded-full bg-white/10 shadow">
-                        Competitions
+                        Show All Competitions
                     </button>
 
                     <button className="animated-border font-medium text-base md:text-lg py-3 px-6 rounded-full bg-white/10 shadow">
-                        Tech Events
+                        Show All Tech Events
                     </button>
                 </div>
 
                 <CarouselContainer />
 
-                <h1 className='text-[28px] sm:text-[32px] md:text-[40px] font-medium mt-[40px] md:mt-[50px] text-center px-4'>
-                    The Stack Behind the Build
-                </h1>
-                <TechStack />
+
 
                 <div className='bg-white w-screen rounded-t-[40px] md:rounded-t-[80px] mt-[80px] md:mt-[100px] px-4 sm:px-8 md:px-16 lg:px-[100px] xl:px-[200px] py-[80px] md:py-[150px] flex flex-col gap-10 rounded-b-[40px] md:rounded-b-[80px]'>
                     <section id={'about'} className='scroll-mt-[275px]'>
