@@ -4,17 +4,30 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Background from "@/components/Background";
 
-// Load Poppins font with CSS variable
 const poppins = Poppins({
     subsets: ["latin"],
     variable: "--font-sans",
-    weight: ["400", "500", "600"], // Add more weights as needed
+    weight: ["400", "500", "600"],
 });
 
-// Default metadata
-export const metadata: Metadata = {
+export const metadata = {
     title: "Kurt Oswill McCarver",
-    description: "A Next.js application.",
+    description: "I'am a web developer based in the Philippines, focused on crafting fast, responsive websites and actively engaging in tech events and competitions to grow and innovate.",
+    openGraph: {
+        title: "Kurt Oswill McCarver | Web Developer",
+        description: "I'am a web developer based in the Philippines, focused on crafting fast, responsive websites and actively engaging in tech events and competitions to grow and innovate.",
+        url: "https://kurtoswill.vercel.app/",
+        siteName: "Kurt Oswill McCarver",
+        images: [
+            {
+                url: "/image/events/smxpbw.jpeg",
+                width: 1200,
+                height: 630,
+                alt: "Your Website Preview Image",
+            },
+        ],
+        type: "website",
+    },
 };
 
 export default function RootLayout({
