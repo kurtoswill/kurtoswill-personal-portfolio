@@ -18,7 +18,7 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    // Handle outside click to close mobile menu
+
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             const target = event.target as Node;
@@ -41,7 +41,7 @@ const Navbar = () => {
         };
     }, [isMenuOpen]);
 
-    // Observe sections to change navbar background
+
     useEffect(() => {
         const observers: IntersectionObserver[] = [];
         let visibleSections = new Set<string>();
@@ -71,7 +71,7 @@ const Navbar = () => {
         };
     }, []);
 
-    // Navigate to section, even from a different page
+
     const handleNavClick = (id: string) => {
         setIsMenuOpen(false);
 

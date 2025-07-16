@@ -20,7 +20,7 @@ const Page = () => {
             <Navbar />
 
             <div className="flex flex-col items-center justify-center gap-6 md:gap-8 mt-[60px] md:mt-[100px]">
-                <h1 className="font-bold text-[28px] sm:text-[48px] md:text-[64px] lg:text-[80px] text-center leading-tight mt-[150px]">
+                <h1 className="font-bold text-[28px] sm:text-[48px] md:text-[64px] lg:text-[80px] text-center leading-tight mt-[75px]">
                     Kurt, Web Developer <br /> Based in the Philippines
                 </h1>
 
