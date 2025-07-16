@@ -2,85 +2,82 @@
 
 import React from 'react';
 import Navbar from "@/components/Navbar";
-import data from '@/data/projects.json';
+import projectsData from '@/data/projects.json';
 import Image from "next/image";
 
 const Page = () => {
-    const projects = data.projects;
+    const projects = projectsData.projects;
 
     return (
-        <div>
+        <div className='mt-[150px]'>
             <Navbar />
 
             {/* Header */}
-            <div className="flex flex-col items-center justify-center gap-6 md:gap-8 px-4">
-                <h1 className="mt-[100px] sm:mt-[150px] font-bold text-[30px] sm:text-[48px] md:text-[64px] lg:text-[80px] text-center leading-tight">
-                    Ideas Into Interfaces,<br />
-                    Code Into Connection
+            <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-16 mb-[100px]'>
+                <h1 className="text-[32px] sm:text-[40px] xl:text-[60px] font-bold leading-tight">
+                    Creating Projects That Solve Real Problems
                 </h1>
-                <p className="font-medium text-[16px] sm:text-[18px] md:text-[21px] text-center max-w-[90%] md:max-w-[700px] px-4 mb-[30px] md:mb-[30px]">
-                    Projects that transform ideas into experiences through design and development.
+                <p className='text-base sm:text-lg md:text-xl'>
+                    Every project starts with a challenge and a purpose—to build something real and impactful.
                 </p>
             </div>
 
-            <hr className="border-b-[1px] border-white/20 my-[40px] mx-4 sm:mx-8 md:mx-16 lg:mx-[100px] mb-[75px]"/>
-
             {/* Projects Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 my-10">
-                {projects.map((project) => (
-                    <div
-                        key={project.id}
-                        className="bg-white text-[#02021A] rounded-2xl shadow-md hover:scale-[1.02] transition-transform duration-300 flex flex-col"
-                    >
-                        {/* Image */}
-                        <div className="relative w-full h-[120px] sm:h-[120px] md:h-[225px] rounded-t-2xl overflow-hidden">
+            <div className="text-[#02021A] pt-8 md:pt-[50px] border-t-2 p-4 sm:p-8 md:p-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+                    {projects.map((project) => (
+                        <div
+                            key={project.id}
+                            className="flex flex-col gap-4 bg-[#F8F8FE] p-4 sm:p-6 rounded-2xl hover:scale-[1.02] transition-transform duration-300"
+                        >
                             <Image
                                 src={project.image}
                                 alt={project.projectname}
-                                layout="fill"
-                                objectFit="cover"
-                                className="rounded-t-2xl border-b-2 border-[#02021A]"
+                                width={400}
+                                height={400}
+                                className='rounded-2xl w-full h-auto shadow-2xl'
                             />
-                        </div>
 
-                        {/* Content */}
-                        <div className="p-3 sm:p-4 flex flex-col flex-1">
-                            <h1 className="text-sm sm:text-base font-bold leading-tight">
-                                {project.projectname}
-                            </h1>
-                            <p className="text-xs sm:text-sm opacity-60 mt-1 flex-1">
-                                {project.description}
-                            </p>
+                            <div className='flex flex-col gap-2 sm:gap-3 text-left'>
+                                <h1 className='text-[18px] sm:text-[20px] md:text-[24px] font-semibold leading-tight'>
+                                    {project.projectname}
+                                </h1>
+                                <p className='text-xs sm:text-sm opacity-50'>
+                                    {project.description}
+                                </p>
 
-                            <div className="flex justify-between mt-3 items-center">
-                                <a
-                                    className="animated-border-inverted font-medium text-xs sm:text-sm py-1 px-2 rounded-full shadow"
-                                    href={project.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Github
-                                </a>
-
-                                {project.preview ? (
+                                <div className="flex gap-3 items-center">
                                     <a
-                                        className="animated-border-inverted font-medium text-xs sm:text-sm py-1 px-2 rounded-full shadow"
-                                        href={project.preview}
+                                        className='opacity-50 hover:opacity-100 transition-all ease-in-out text-left text-xs sm:text-sm underline'
+                                        href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        Preview
+                                        Github
                                     </a>
-                                ) : (
-                                    <span className="text-[12px] sm:text-[14px] italic opacity-50">
-                                        No preview
-                                    </span>
-                                )}
+
+                                    {project.preview ? (
+                                        <a
+                                            className='opacity-50 hover:opacity-100 transition-all ease-in-out text-left text-xs sm:text-sm underline'
+                                            href={project.preview}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Preview
+                                        </a>
+                                    ) : (
+                                        <span className="text-[10px] sm:text-[12px] italic opacity-50">
+                                            No preview
+                                        </span>
+                                    )}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
+
+
 
             {/* Divider */}
             <hr className="border-b-[1px] border-white/20 mt-10 mx-4 sm:mx-8 md:mx-16 lg:mx-[100px]" />

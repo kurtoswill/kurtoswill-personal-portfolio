@@ -8,7 +8,7 @@ const Page = () => {
     const competitions = data.competitions;
 
     return (
-        <div className='mt-[100px]'>
+        <div className='mt-[150px]'>
             <Navbar />
 
             <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-10'>
