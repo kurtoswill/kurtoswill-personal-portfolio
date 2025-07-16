@@ -78,12 +78,17 @@ const Page = () => {
                 </div>
 
                 {/* Contact Form */}
-                <div className='flex flex-col gap-2 w-full lg:w-auto lg:min-w-[400px]' id={'contact'}>
+                <form
+                    action="https://formspree.io/f/mwpqkqye"
+                    method="POST"
+                    className='flex flex-col gap-2 w-full lg:w-auto lg:min-w-[400px]'
+                    id="contact"
+                >
                     <Label htmlFor="email">Email</Label>
-                    <Input type="email" id="email" placeholder="Email" className='mb-2'/>
+                    <Input type="email" name="email" id="email" placeholder="Email" className='mb-2' required />
 
                     <Label htmlFor="message">Your message</Label>
-                    <Textarea placeholder="Type your message here." id="message" className="min-h-[120px]" />
+                    <Textarea name="message" id="message" placeholder="Type your message here." className="min-h-[120px]" required />
 
                     <button
                         type="submit"
@@ -91,7 +96,8 @@ const Page = () => {
                     >
                         Send
                     </button>
-                </div>
+                </form>
+
             </div>
 
             <hr
