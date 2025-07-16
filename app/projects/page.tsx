@@ -12,18 +12,20 @@ const Page = () => {
             <Navbar />
 
             {/* Header */}
-            <div className="flex flex-col items-center justify-center gap-6 md:gap-8 px-4">
+            <div className="flex flex-col items-center justify-center gap-6 md:gap-8 px-4"  >
                 <h1 className="mt-[100px] sm:mt-[150px] font-bold text-[30px] sm:text-[48px] md:text-[64px] lg:text-[80px] text-center leading-tight">
                     Ideas Into Interfaces,<br />
                     Code Into Connection
                 </h1>
-                <p className="font-medium text-[16px] sm:text-[18px] md:text-[21px] text-center max-w-[90%] md:max-w-[700px] px-4">
+                <p className="font-medium text-[16px] sm:text-[18px] md:text-[21px] text-center max-w-[90%] md:max-w-[700px] px-4 mb-[30px] md:mb-[30px]">
                     Projects that transform ideas into experiences through design and development.
                 </p>
             </div>
 
+            <hr className="border-b-[1px] border-white/20 mt-10 mx-4 sm:mx-8 md:mx-16 lg:mx-[100px]" id={'content'}/>
+
             {/* Projects Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mt-[80px] pb-10 px-2 sm:px-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mt-[80px] pb-10 px-2 sm:px-4"  >
                 {projects.map((project) => (
                     <div
                         key={project.id}

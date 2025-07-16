@@ -39,7 +39,7 @@ export default function RootLayout({
         <html lang="en" className={poppins.variable}>
         <body className="antialiased">
         <div className="relative min-h-screen overflow-hidden">
-            <Background position="top" />
+
             <main className="relative z-10 mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-32 2xl:mx-[200px]">
                 {children}
             </main>
