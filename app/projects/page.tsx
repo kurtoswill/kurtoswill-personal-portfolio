@@ -46,7 +46,7 @@ const Page = () => {
                                     {project.description}
                                 </p>
 
-                                <div className="flex gap-3 items-center">
+                                <div className="flex gap-3 items-center justify-between">
                                     <a
                                         className='opacity-50 hover:opacity-100 transition-all ease-in-out text-left text-xs sm:text-sm underline'
                                         href={project.github}
