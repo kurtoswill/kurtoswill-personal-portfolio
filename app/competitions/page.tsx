@@ -33,6 +33,7 @@ const Page = () => {
                                 width={600}
                                 height={600}
                                 className='rounded-2xl w-full h-auto shadow-2xl'
+                                unoptimized
                             />
 
                             <div className='flex flex-col gap-3 sm:gap-4 text-left'>

@@ -1,6 +1,32 @@
 {
   "projects": [
     {
+      "id": "7",
+      "projectname": "Spezi",
+      "year": "2025",
+      "location": "Cavite State University",
+      "tools": [
+        "Next.js",
+        "TypeScript",
+        "JavaScript"
+      ],
+      "github": "https://github.com/kurtoswill/spezi",
+      "description": "Spezi gives you real-time, accent-aware feedback to help you communicate clearly in global meetings.",
+      "image": "",
+      "preview": "https://spezi.vercel.app/"
+    },
+    {
+      "id": "6",
+      "projectname": "Personal Portfolio",
+      "year": "2025",
+      "location": "Cavite State University",
+      "tools": ["Next.js", "TypeScript", "JavaScript"],
+      "github": "https://github.com/kurtoswill/kurtoswill-personal-portfolio",
+      "description": "A developer portfolio showcasing my projects, tech competitions, and event contributions—highlighting both technical skills and real-world experience.",
+      "image": "/image/projects/portfolio.png",
+      "preview": "https://kurtoswill.vercel.app/"
+    },
+    {
       "id": "5",
       "projectname": "PlanPal",
       "year": "2025",
@@ -30,7 +56,7 @@
       "tools": ["Next.js", "TypeScript", "JavaScript", "MiniKit", "OnChainKit", "Supabase", "Wagmi"],
       "github": "https://github.com/kurtoswill/NameThat",
       "description": "NameThat lets users crowdsource creative names for images, powered by the Base blockchain.",
-      "image": "/image/projects/namethat.png",
+      "image": "/image/projects/namethat.jpg",
       "preview": ""
     },
     {
@@ -41,7 +67,7 @@
       "tools": ["HTML", "CSS"],
       "github": "https://github.com/waffensultan/itc-website",
       "description": "AdoptMe helps shelters share adoptable pets and their stories to promote easy adoption.",
-      "image": "/image/projects/no-image.jpeg",
+      "image": "",
       "preview": ""
     },
     {
@@ -52,7 +78,7 @@
       "tools": ["Next.js", "TypeScript", "JavaScript"],
       "github": "https://github.com/AWSLC-Spade/AWSLC-SPADE",
       "description": "We built our organizations website under AWS Spade—my first Next.js project and the start of my web dev journey.",
-      "image": "/image/projects/no-image.jpeg",
+      "image": "",
       "preview": ""
     }
   ]

@@ -28,13 +28,17 @@ const Page = () => {
                 </p>
 
                 <div className="flex flex-row sm:flex-row gap-4 mb-[60px] md:mb-[60px]">
-                    <button className="animated-border font-medium text-base md:text-lg py-3 px-6 rounded-full bg-white/10 shadow">
-                        Show All Competitions
-                    </button>
+                    <a href="competitions">
+                        <button className="animated-border font-medium text-base md:text-lg py-3 px-6 rounded-full bg-white/10 shadow">
+                            Show All Competitions
+                        </button>
+                    </a>
 
-                    <button className="animated-border font-medium text-base md:text-lg py-3 px-6 rounded-full bg-white/10 shadow">
-                        Show All Tech Events
-                    </button>
+                   <a href="events">
+                       <button className="animated-border font-medium text-base md:text-lg py-3 px-6 rounded-full bg-white/10 shadow">
+                           Show All Tech Events
+                       </button>
+                   </a>
                 </div>
 
                 <CarouselContainer />
